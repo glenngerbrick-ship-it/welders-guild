@@ -1,0 +1,14 @@
+:root {
+  --bg: #0f1114;
+  --surface: #1a1d23;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --accent: #ff6b00;
+  --border: #2d323b;
+}
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+.header { background: var(--surface); border-bottom: 1px solid var(--border); }
+.hero { padding: 4rem 0; text-align: center; }
+.hero h2 { font-family: 'Oswald', sans-serif; font-size: 3rem; }
+.job-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
