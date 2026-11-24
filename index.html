@@ -3,38 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welders Guild | Job Board</title>
+  <title>The Welders Guild</title>
+  <meta name="description" content="The Welders Guild — verified skill, members-only work, a standing record that follows you.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <h1>WELDERS GUILD</h1>
-        <span class="tagline">JOB BOARD</span>
+  <div class="hero">
+    <div class="forge" aria-hidden="true"></div>
+    <div class="inner">
+      <svg class="crest" viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="50,4 90,20 90,55 50,96 10,55 10,20" fill="none" stroke="#9C7A3C" stroke-width="2.5"/>
+        <polygon points="50,14 82,27 82,52 50,86 18,52 18,27" fill="none" stroke="#C39B4E" stroke-width="1"/>
+        <g stroke="#DDD0AC" stroke-width="2.5" stroke-linecap="round" fill="none">
+          <line x1="35" y1="66" x2="60" y2="41"/>
+          <line x1="60" y1="41" x2="56" y2="30"/>
+          <line x1="60" y1="41" x2="71" y2="45"/>
+          <circle cx="35" cy="66" r="3" fill="#DDD0AC" stroke="none"/>
+        </g>
+      </svg>
+      <h1>The Welders Guild</h1>
+      <p class="sub">Verified skill. Members-only work. A record that follows you.</p>
+      <div class="ctas">
+        <a class="cta primary" href="#about">What the Guild is</a>
+        <a class="cta" href="#run">Run the app</a>
       </div>
-      <nav id="mainNav">
-        <a href="#jobs">Jobs</a>
-        <a href="forum.html">Shop Talk</a>
-        <a href="membership.html">Membership</a>
-        <a href="certs.html">Certifications</a>
-      </nav>
     </div>
-  </header>
-  <section class="hero">
-    <div class="container">
-      <h2>Find Your Next Weld</h2>
-      <p>Real welding jobs. Real pay. No résumé walls.</p>
-    </div>
+  </div>
+
+  <section id="about">
+    <p class="mark">Companion page</p>
+    <h2>This repo is the shell</h2>
+    <p>
+      The working product — founding roll, member accounts, certification review,
+      coins, tiers, and the members-only job board — lives in
+      <strong>guild-server</strong>. This page is a lightweight public face that
+      points you there.
+    </p>
   </section>
-  <section id="jobs" class="jobs-section container">
-    <h3>Available Positions</h3>
-    <div id="jobsContainer" class="jobs-grid"></div>
+
+  <section id="capabilities">
+    <p class="mark">In the Guild Hall</p>
+    <h2>What members get</h2>
+    <ul>
+      <li><strong>Founding roll</strong> — put your name on the charter with no dues.</li>
+      <li><strong>Certifications</strong> — submit proof; CWIs and inspectors approve coins.</li>
+      <li><strong>Standing</strong> — Apprentice → Journeyman → Master from verified breadth.</li>
+      <li><strong>Job board</strong> — members-only postings filtered by coin tier.</li>
+    </ul>
   </section>
-  <script src="script.js"></script>
+
+  <section id="run">
+    <p class="mark">Local</p>
+    <h2>Run guild-server</h2>
+    <pre><code>cd guild-server
+npm install
+cp .env.example .env   # set ADMIN_* and SESSION_SECRET
+npm start
+# optional: npm run demo</code></pre>
+    <p class="hint">
+      Public site → <code>http://localhost:3000</code><br>
+      Guild Hall → <code>http://localhost:3000/portal</code><br>
+      Admin → <code>http://localhost:3000/admin</code>
+    </p>
+  </section>
+
+  <footer>
+    <span>The Welders Guild</span>
+    Skill verified. Standards kept. Trade honored.
+  </footer>
 </body>
 </html>
